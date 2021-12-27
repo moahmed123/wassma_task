@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+Launches the json server:
+
+### `json-server --watch db.json --port 3004` 
+
 In the project directory, you can run:
 
 ### `npm start`
