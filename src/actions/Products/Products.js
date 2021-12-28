@@ -58,6 +58,32 @@ export const EditPro = (ProsIsUpdate) =>{
         ProsIsUpdate
     }
 }
+
+// Add New Product. 
+export const addProduct = (thumb, ProName_en, ProName_ar, weight, category) => async(dispatch) => {    
+
+    let LoginURL = 'http://localhost:3004/Products'; // TODO: add URL on env && Valid API Request 
+
+    await axios.post(LoginURL, { // We Can Collect all Methods for One file. 
+        thumb: thumb,
+        ProName_en: ProName_en,
+        ProName_ar: ProName_ar,
+        weight: weight,
+        category: category
+    })
+    .then(function (response) {        
+        // handle success              
+        console.log("response added ", response);  
+        if(response.status == 201){
+            dispatch(EditPro(true));            
+        }      
+    })
+    .catch(function (error) {
+       // handle error
+        console.log(error);
+    });
+}
+
 //Delete Pro
 export const  deleteProducts = (ProductId) => async(dispatch) => {    
 

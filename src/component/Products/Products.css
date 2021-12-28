@@ -1,0 +1,32 @@
+.header_table{
+    display: flex;
+    margin-bottom: 10px;
+}
+.header_table_head{
+    flex:1;
+}
+.header_table_btn{
+    background-color: #dbdbdb;
+    color: #333;
+    border-color: #dbdbdb;
+    font-size: 13px;
+    font-weight: 500;
+}
+.table_icon_delete,
+.table_icon_edit{
+    background: #ddd;
+    border-color: #ddd;
+    padding: 2px 8px;
+    margin: 0 4px;
+}
+.table_icon_delete:hover ,
+.table_icon_edit:hover,
+.table_icon_delete:active ,
+.table_icon_edit:active {
+    color: #fff;
+    background-color: #d3d3d3;
+    border-color: #d3d3d3;
+}
+.table_td_center{
+    text-align: center;    
+}

@@ -1,9 +1,9 @@
 {
   "category": [
     {
-      "id": 1,
-      "name_en": "furniture",
-      "name_ar": "أثاث المنزل"
+      "name_en": "Mohamed Alaa abas222",
+      "name_ar": "أثاaث المنزل",
+      "id": 1
     },
     {
       "id": 2,
@@ -19,19 +19,27 @@
   "products": [
     {
       "thumb": "https://raw.githubusercontent.com/moahmed123/E-shop-v2/main/ImageProduct/fashion/1/2.png",
-      "ProName_en": "women suit A11",
-      "ProName_ar": "بدلة نسائية A11",
-      "weight": "11",
+      "ProName_en": "women suit A5",
+      "ProName_ar": "بدلة نسائية ",
+      "weight": "12",
       "category": "fashion",
       "id": 3
     },
     {
+      "id": 2,
       "thumb": "https://raw.githubusercontent.com/moahmed123/E-shop-v2/main/ImageProduct/fashion/2/1.png",
-      "ProName_en": "Cashmere Tank 11",
-      "ProName_ar": "خزان الكشمير11",
+      "ProName_en": "Cashmere Tank ",
+      "ProName_ar": "خزان الكشمير",
       "weight": "123",
-      "category": "fashion",
-      "id": 2
+      "category": "fashion"
+    },
+    {
+      "id": 1,
+      "thumb": "https://raw.githubusercontent.com/moahmed123/E-shop-v2/main/ImageProduct/furniture/1/1.png",
+      "ProName_en": "chair p-239 ",
+      "ProName_ar": "كرسي ص 239",
+      "weight": "123",
+      "category": "furniture"
     }
   ],
   "login": [
@@ -42,7 +50,7 @@
     },
     {
       "username": "ahmed",
-      "password": "@ahmed",
+      "password": "@hmed",
       "permission": "editor"
     }
   ]

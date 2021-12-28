@@ -1,3 +1,4 @@
+/* @import 'bootstrap/dist/css/bootstrap.min.css'; */
 .App {
   text-align: center;
 }
@@ -15,15 +16,17 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   color: white;
 }
-
+.home_dashborad{
+    padding: 70px 0;
+}
 .App-link {
   color: #61dafb;
 }

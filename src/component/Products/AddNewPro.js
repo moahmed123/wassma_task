@@ -1,18 +1,13 @@
-import React, { useEffect } from 'react';
-import { useParams, useLocation } from "react-router-dom";
-import { GetPros } from '../../actions';
+import React, {useEffect} from 'react';
+import {GetPros} from '../../actions';
+import {connect} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { connect } from 'react-redux';
 
-const EditProduct = (props) => {
-
-    let { id } = useParams();
-    const { state } = useLocation();
+const AddNewPro = (props) => {
     let navigate = useNavigate();
-    
     useEffect(() => {
-        if (props.ProsIsUpdate) {
-            if (props.ProsIsUpdate == true) {
+        if (props.ProIsAdd) {
+            if (props.ProIsAdd == true) {
                 navigate('/');
             }
         }
@@ -28,57 +23,51 @@ const EditProduct = (props) => {
             e.target.weight.value,
             e.target.category.value
         );
-        props.dispatch(GetPros.editProducts(
-            id,
+        props.dispatch(GetPros.addProduct(
             e.target.thumb.value,
             e.target.name_en.value,
             e.target.name_ar.value,
             e.target.weight.value,
             e.target.category.value
-        ));             
+        ));
     }
+
     return (
         <div>
-            edit Product {id}
             <form onSubmit={handleSubmit}>
                 <label>
                     thumb:
                     <input
                         type="text"
-                        name="thumb"
-                        defaultValue={state.thumb}
+                        name="thumb"                        
                     />
                 </label>
                 <label>
                     Name English:
                     <input
                         type="text"
-                        name="name_en"
-                        defaultValue={state.ProName_en}
+                        name="name_en"                        
                     />
                 </label>
                 <label>
                     Name Arabic:
                     <input
                         type="text"
-                        name="name_ar"
-                        defaultValue={state.ProName_ar}
+                        name="name_ar"                        
                     />
                 </label>
                 <label>
                     weight:
                     <input
                         type="number"
-                        name="weight"
-                        defaultValue={state.weight}
+                        name="weight"                        
                     />
                 </label>
                 <label>
                     category:
                     <input
                         type="text"
-                        name="category"
-                        defaultValue={state.category}
+                        name="category"                        
                     />
                 </label>
                 <button type="submit">Submit</button>
@@ -86,10 +75,10 @@ const EditProduct = (props) => {
         </div>
     )
 }
-const mapStateToProps = (state) => {
-    console.log(state)
+
+const mapStateToProps = (state) => {    
     return {
-        ProsIsUpdate: state.default.editPro,
+        ProIsAdd: state.default.editPro,
     }
 }
-export default connect(mapStateToProps)(EditProduct);
+export default connect(mapStateToProps)(AddNewPro);
