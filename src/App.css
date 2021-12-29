@@ -1,4 +1,7 @@
 /* @import 'bootstrap/dist/css/bootstrap.min.css'; */
+#root{
+    height: 100%;
+}
 .App {
   text-align: center;
 }
@@ -38,4 +41,43 @@
   to {
     transform: rotate(360deg);
   }
+}
+.Lang_btn,
+.Lang_btn:hover,
+.Lang_btn:active,
+.Lang_btn:focus{    
+    background-color: transparent;
+    border: transparent;
+    outline: none !important;
+    box-shadow: none !important
+}
+.btn-end{
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+}
+.nav_logout{
+
+    background: #14161a;
+    border-color: #14161a;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 7px 16px;
+
+}
+/* TODO: Media QUERY */
+@media(min-width: 767px){
+    .add_new_Product form,
+    .login_page form,
+    .add_new_category form{        
+        width: 70vh;        
+    }
+}
+@media(max-width: 767px){
+    .add_new_Product form,
+    .login_page form,
+    .add_new_category form{        
+        width: 100%;
+    }
 }

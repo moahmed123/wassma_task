@@ -3,13 +3,14 @@ import { useParams, useLocation } from "react-router-dom";
 import { GetPros } from '../../actions';
 import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Button } from 'react-bootstrap';
 
 const EditProduct = (props) => {
 
     let { id } = useParams();
     const { state } = useLocation();
     let navigate = useNavigate();
-    
+
     useEffect(() => {
         if (props.ProsIsUpdate) {
             if (props.ProsIsUpdate == true) {
@@ -35,55 +36,57 @@ const EditProduct = (props) => {
             e.target.name_ar.value,
             e.target.weight.value,
             e.target.category.value
-        ));             
+        ));
     }
     return (
-        <div>
-            edit Product {id}
-            <form onSubmit={handleSubmit}>
-                <label>
-                    thumb:
-                    <input
-                        type="text"
-                        name="thumb"
-                        defaultValue={state.thumb}
-                    />
-                </label>
-                <label>
-                    Name English:
-                    <input
-                        type="text"
-                        name="name_en"
-                        defaultValue={state.ProName_en}
-                    />
-                </label>
-                <label>
-                    Name Arabic:
-                    <input
-                        type="text"
-                        name="name_ar"
-                        defaultValue={state.ProName_ar}
-                    />
-                </label>
-                <label>
-                    weight:
-                    <input
-                        type="number"
-                        name="weight"
-                        defaultValue={state.weight}
-                    />
-                </label>
-                <label>
-                    category:
-                    <input
-                        type="text"
-                        name="category"
-                        defaultValue={state.category}
-                    />
-                </label>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+        <section className="add_new_Product">
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-12'>
+                        <h2 className='text-center header_category'> Edit Product {state.ProName_en}</h2>
+                        <form onSubmit={handleSubmit}>
+                            <div className='col-12'>
+                                <label> Thumb: </label>
+                                <input type="text" name="thumb" defaultValue={state.thumb} />
+                            </div>
+                            <div className='col-12'>
+                                <label> Name English: </label>
+                                <input
+                                    type="text"
+                                    name="name_en"
+                                    defaultValue={state.ProName_en}
+                                />
+                            </div>
+                            <div className='col-12'>
+                                <label> Name Arabic: </label>
+                                <input
+                                    type="text"
+                                    name="name_ar"
+                                    defaultValue={state.ProName_ar}
+                                />
+                            </div>
+                            <div className='col-12'>
+                                <label> weight: </label>
+                                <input
+                                    type="number"
+                                    name="weight"
+                                    defaultValue={state.weight}
+                                />
+                            </div>
+                            <div className='col-12'>
+                                <label> category: </label>
+                                <input
+                                    type="text"
+                                    name="category"
+                                    defaultValue={state.category}
+                                />
+                            </div>
+                            <Button type="submit">Submit</Button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     )
 }
 const mapStateToProps = (state) => {

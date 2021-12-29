@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import { useParams, useLocation } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { GetCate } from '../../actions';
+import { Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 const  EditCategory = (props) => {
@@ -33,28 +34,27 @@ const  EditCategory = (props) => {
         ));             
     }
     return (
-        <div>
-            Edit Category {id}
-            <form onSubmit={handleSubmit}>
-                <label>
-                    thumb:
-                    <input
-                        type="text"
-                        name="name_en"
-                        defaultValue={state.name_en}
-                    />
-                </label>
-                <label>
-                    Name English:
-                    <input
-                        type="text"
-                        name="name_ar"
-                        defaultValue={state.name_ar}
-                    />
-                </label>               
-                <button type="submit">Submit</button>
-            </form>
+        <section className="add_new_category">
+        <div className='container'>
+            <div className='row'>
+                <div className='col-12'>
+                    <h2 className='text-center header_category'>Edit Category {state.name_en}</h2>
+                    <form onSubmit={handleSubmit}>
+                        <div className='col-12'>
+                            <label> Name English: </label>                        
+                            <input type="text" name="name_en" defaultValue={state.name_en} />
+                        </div>
+
+                        <div className='col-12'>
+                            <label> Name Arabic: </label>
+                            <input type="text" name="name_ar" defaultValue={state.name_ar} />                            
+                        </div>
+                        <Button type="submit">Submit</Button>
+                    </form>
+                </div>
+            </div>
         </div>
+        </section>       
     )
 }
 

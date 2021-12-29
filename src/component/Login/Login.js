@@ -3,7 +3,8 @@ import localStorage from 'localStorage';
 import { AccLogin } from './../../actions';
 import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-
+import { Button } from 'react-bootstrap';
+import './login.css';
 
 function Login(props) {        
     let navigate = useNavigate();
@@ -31,28 +32,29 @@ function Login(props) {
     }
     
     return (
-        <div className="App">
-            <div className="App-header">           
-                <form onSubmit={handleSubmit}>
-                    <label>
-                        Name:
-                        <input
-                            type="text"
-                            name="username"
-                        />
-                    </label>
-                    <label>
-                        Password:
-                        <input
-                            type="password"
-                            placeholder="Enter Password "
-                            name="password"
-                        />
-                    </label>                                     
-                    <button type="submit">Submit</button>                                       
-                </form>
-            </div>
-        </div>
+        <section className="login_page">
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-12'>           
+                        <form onSubmit={handleSubmit}>
+                            <div className='col-12'>
+                                <label>
+                                    Name:                                
+                                </label>
+                                <input type="text" name="username" placeholder="Enter Name" />
+                            </div>
+                            <div className='col-12'>
+                                <label>
+                                    Password:                                    
+                                </label>
+                                <input type="password" placeholder="Enter Password " name="password" />                                
+                            </div>                                                        
+                            <Button type="submit">Submit</Button>                                       
+                        </form>
+                    </div>
+                </div>
+            </div>            
+        </section>
     )
 }
 

@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
-import {GetPros} from '../../actions';
-import {connect} from 'react-redux';
+import React, { useEffect } from 'react';
+import { GetPros } from '../../actions';
+import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-
+import { Button } from 'react-bootstrap';
 const AddNewPro = (props) => {
     let navigate = useNavigate();
     useEffect(() => {
@@ -33,50 +33,55 @@ const AddNewPro = (props) => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    thumb:
-                    <input
-                        type="text"
-                        name="thumb"                        
-                    />
-                </label>
-                <label>
-                    Name English:
-                    <input
-                        type="text"
-                        name="name_en"                        
-                    />
-                </label>
-                <label>
-                    Name Arabic:
-                    <input
-                        type="text"
-                        name="name_ar"                        
-                    />
-                </label>
-                <label>
-                    weight:
-                    <input
-                        type="number"
-                        name="weight"                        
-                    />
-                </label>
-                <label>
-                    category:
-                    <input
-                        type="text"
-                        name="category"                        
-                    />
-                </label>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+        <section className="add_new_Product">
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-12'>
+                        <h2 className='text-center header_category'> Add New Product </h2>
+                        <form onSubmit={handleSubmit}>
+                            <div className='col-12'>
+                                <label> Thumb: </label>
+                                <input type="text" name="thumb" />
+                            </div>
+                            <div className='col-12'>
+                                <label> Name English: </label>
+                                <input
+                                    type="text"
+                                    name="name_en"
+                                />
+                            </div>
+                            <div className='col-12'>
+                                <label> Name Arabic: </label>
+                                <input
+                                    type="text"
+                                    name="name_ar"
+                                />
+                            </div>
+                            <div className='col-12'>
+                                <label> weight: </label>
+                                <input
+                                    type="number"
+                                    name="weight"
+                                />
+                            </div>
+                            <div className='col-12'>
+                                {/* TODO: work for Choose From Categories in DB Select/Option  */}
+                                <label> category: </label>
+                                <input
+                                    type="text"
+                                    name="category"
+                                />
+                            </div>
+                            <Button type="submit">Submit</Button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     )
 }
 
-const mapStateToProps = (state) => {    
+const mapStateToProps = (state) => {
     return {
         ProIsAdd: state.default.editPro,
     }

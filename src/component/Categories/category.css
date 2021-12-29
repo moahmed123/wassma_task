@@ -30,3 +30,62 @@
 .table_td_center{
     text-align: center;
 }
+
+/** Start From **/
+.add_new_category{
+    background-color: #282c34;
+}
+.add_new_category,
+.add_new_category .container{
+    height: 100%;
+}
+
+.add_new_category .row{
+    align-items: center;    
+    height: 100%;
+}
+.add_new_category .header_category{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+}
+.add_new_category form{
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;    
+    margin: 0 auto;
+}
+.add_new_category form label{
+    display: block;
+    font-size: 13px;
+    padding: 3px 0;
+}
+.add_new_category form input{
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 33px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+.add_new_category form input::placeholder{
+    font-size: 12px;    
+}
+
+.add_new_category form button{
+    margin-top: 5px;
+}
+
+.add_new_category form .btn-primary {
+    color: #fff;
+    background-color: #282c34;
+    border-color: #282c34;
+}
+.add_new_category form .btn-primary:hover{
+    color: #fff;    
+    background-color: #131518;
+    border-color: #131518;
+
+}

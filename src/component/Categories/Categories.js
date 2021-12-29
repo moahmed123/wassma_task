@@ -6,6 +6,7 @@ import { Button, Table } from 'react-bootstrap';
 import "./category.css";
 import deleteSvg from './../../delete.svg';
 import editSvg from './../../edit.svg';
+import { useTranslation } from 'react-i18next';
 
 
 const Categories = (props) => {
@@ -13,17 +14,18 @@ const Categories = (props) => {
         props.dispatch(GetCate.getCategories());
     }, []);
     let navigate = useNavigate();
+    const { t, i18n } = useTranslation();
     return (
         <div>
             <div className='header_table'>
-                <h5 className='header_table_head'>Categories</h5>
-                <Button className='header_table_btn' onClick={() => navigate(`/AddNewCate`)}>Add Category</Button>
+                <h5 className='header_table_head'>{t("Categories")}</h5>
+                <Button className='header_table_btn' onClick={() => navigate(`/AddNewCate`)}>{t("Add_Category")}</Button>
             </div>
 
             <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>{t("Name")}</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -31,9 +33,10 @@ const Categories = (props) => {
                     {
                         props.Categories_Data && props.Categories_Data.map((data, key) => {
                             return (
-                                <tr key={key}>
-                                    {/* {data.name_ar} */}
-                                    <td>{data.name_en}</td>
+                                <tr key={key}>                                    
+                                    <td>                                        
+                                        {i18n.language == 'en' ? data.name_en : data.name_ar}
+                                    </td>
                                     <td className='table_td_center'>
                                         <Button className='table_icon_delete' variant="danger" onClick={() => {
                                             console.log(data.id)

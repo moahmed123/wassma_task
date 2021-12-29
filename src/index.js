@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // Importing the Bootstrap CSS
@@ -20,6 +20,7 @@ import {
     Route
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import './i18n';
 
 const reducer = combineReducers(reducers);
 // applyMiddleware supercharges createStore with middleware:
@@ -28,6 +29,7 @@ const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
     <React.StrictMode>
+        <Suspense fallback={<div>Loading... </div>}>
         <Provider store={store}>
             <BrowserRouter>
                 <Routes>
@@ -46,6 +48,7 @@ ReactDOM.render(
             </BrowserRouter>
             {/* <App /> */}
         </Provider>
+        </Suspense>
     </React.StrictMode>,
     document.getElementById('root')
 );

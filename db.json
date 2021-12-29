@@ -1,57 +1,58 @@
 {
-  "category": [
-    {
-      "name_en": "Mohamed Alaa abas222",
-      "name_ar": "أثاaث المنزل",
-      "id": 1
-    },
-    {
-      "id": 2,
-      "name_en": "fashion",
-      "name_ar": "موضه"
-    },
-    {
-      "id": 3,
-      "name_en": "Sweatshirts",
-      "name_ar": "بلوزات"
-    }
-  ],
-  "products": [
-    {
-      "thumb": "https://raw.githubusercontent.com/moahmed123/E-shop-v2/main/ImageProduct/fashion/1/2.png",
-      "ProName_en": "women suit A5",
-      "ProName_ar": "بدلة نسائية ",
-      "weight": "12",
-      "category": "fashion",
-      "id": 3
-    },
-    {
-      "id": 2,
-      "thumb": "https://raw.githubusercontent.com/moahmed123/E-shop-v2/main/ImageProduct/fashion/2/1.png",
-      "ProName_en": "Cashmere Tank ",
-      "ProName_ar": "خزان الكشمير",
-      "weight": "123",
-      "category": "fashion"
-    },
-    {
-      "id": 1,
-      "thumb": "https://raw.githubusercontent.com/moahmed123/E-shop-v2/main/ImageProduct/furniture/1/1.png",
-      "ProName_en": "chair p-239 ",
-      "ProName_ar": "كرسي ص 239",
-      "weight": "123",
-      "category": "furniture"
-    }
-  ],
-  "login": [
-    {
-      "username": "Khaled",
-      "password": "kh@led",
-      "permission": "manager"
-    },
-    {
-      "username": "ahmed",
-      "password": "@hmed",
-      "permission": "editor"
-    }
-  ]
+    "category": [
+        {
+            "id": 1,
+            "name_en": "furniture",
+            "name_ar": "أثاث المنزل"
+        },
+        {
+            "id": 2,
+            "name_en": "fashion",
+            "name_ar": "موضه"
+        },
+        {
+            "id": 3,
+            "name_en":  "Sweatshirts",
+            "name_ar": "بلوزات"
+        }
+    ],
+    "products": [
+        {
+            "id": 3,
+            "thumb":  "https://raw.githubusercontent.com/moahmed123/E-shop-v2/main/ImageProduct/fashion/1/2.png",
+            "ProName_en": "women suit A5",
+            "ProName_ar": "بدلة نسائية A5",
+            "weight": "123",
+            "category": "fashion"
+        },
+        {
+            "id": 2,
+            "thumb":  "https://raw.githubusercontent.com/moahmed123/E-shop-v2/main/ImageProduct/fashion/2/1.png",
+            "ProName_en": "Cashmere Tank ",
+            "ProName_ar": "خزان الكشمير",
+            "weight": "123",
+            "category": "fashion"
+        },
+        {
+            "id": 1,
+            "thumb":  "https://raw.githubusercontent.com/moahmed123/E-shop-v2/main/ImageProduct/furniture/1/1.png",
+            "ProName_en": "chair p-239 ",
+            "ProName_ar": "كرسي ص 239",
+            "weight": "123",
+            "category": "furniture"
+        }
+    ],
+    "login":[
+        {
+            "username": "Khaled",
+            "password":"kh@led",
+            "permission":"manager"
+        },
+        {
+            "username": "ahmed",
+            "password":"@hmed",
+            "permission":"editor"
+        }
+    ]
+
 }
